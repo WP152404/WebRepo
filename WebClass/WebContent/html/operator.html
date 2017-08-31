@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jsp</title>
+</head>
+<body>
+  <script>
+
+function add(){
+  var a = document.getElementByid("num1").value;
+  var b = document.getElementByid("num2").value;
+
+  document.getElementByid("result").value = (Number)a+(ParseInt)b;
+}
+
+  </script>
+<input type="text" id="num1" size="5" />+
+<input type="text" id="num2" size="5" />=
+<input type="text" id="result" size="5" />
+<input type="button" oneclick="add();" value="계산" />
+</body>
+</html>

@@ -1,0 +1,46 @@
+<head>
+
+  <meta charset="utf-8" />
+  <title>실습</title>
+  <scipt src="../js/hello.js"></scipt>
+  <script>
+  var nation ='z'
+  function korea(){
+    alert("안녕하세요");
+    nation = 'k';
+    greeting(nation);
+  }
+  function america(){
+    alert("hello");
+    nation ='a';
+    greeting(nation);
+  }
+  function china(){
+    alert("ni hao");
+    nation="c"
+    greeting(nation);
+  }
+  function greeting(nation){
+    if(nation=='k'){
+      document.getElementByid("result").innerHTML ="안녕하세요"
+    }else if(nation=='a'){
+      document.getElementByid("result").innerHTML="hello"
+    }else if (nation=='c'){
+      document.getElementByid("result").innerHTML="n ihao"
+    }
+  }
+
+  </script>
+</head>
+<body>
+
+각나라의 인사말
+<br />
+<input type="button" oneclick="korea();" value="한국" />
+<button type="button " oneclick="america();" value="미국"></button>
+<button type="button " oneclick="china();">중국</button>
+
+<p id="result">
+
+</p>
+</body>
