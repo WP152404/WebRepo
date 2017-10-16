@@ -60,7 +60,7 @@ public class BlogLoginServlet extends HttpServlet {
 	         HttpSession session = request.getSession();
 	         UserVO user = new UserVO();
 	         user.setId(id);
-	         user.setName("test@naver.com");
+	         user.setName("권순호");
 	         user.setNickname("의적");
 	         
 	         session.setAttribute("user", user);
