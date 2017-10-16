@@ -29,13 +29,13 @@
   <br />
   <div class="col-sm-6 col-sm-offset-3">
 
-<form id="loginForm">
+<form id="loginForm" action="/WebClass/bloglogin" method="post">
 
 
 
-  <input type="email" name="email" placeholder="Email..." class="form-username form-control" id="id" required>
+  <input type="email" name="id" placeholder="Email..." class="form-username form-control" id="id" required>
   <br />
-  <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="pwd" required>
+  <input type="password" name="pwd" placeholder="Password..." class="form-password form-control" id="pwd" required>
   <br />
   <button class="btn btn-success btn-md" type="submit"><i class="fa fa-circle-o-notch fa-spin"></i> Login</button>
   <button class="btn btn-danger btn-md">Signup</button>
@@ -64,12 +64,20 @@
       </div>
     </div>
   </div>
-
- 
+<%@ include file="../jsp/modal.jsp" %>
+ <script>
+	<%-- 로그인이 실패한 경우 처리 추가 --%>
+	<% if("error".equals(request.getAttribute("msg"))) { %>
+		var myModal = $('#myModal');
+		myModal.find('.modal-title').text('Login Error');
+		myModal.find('.modal-body').text('Invalid username or password');
+		myModal.modal();
+	<%  }  %>
+</script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <script src="../js/JQUERYindex.js"></script>
-<script src="../js/login.js"></script>
+
 </body>
 </html>
